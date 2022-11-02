@@ -12,4 +12,10 @@ public class FizzBuzzTest {
         assertEquals("1", fizzBuzzConverter.fizzBuzzConvert(1));
     }
 
+    @Test
+    public void convertTwoAsIntegerToString() {
+        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
+        assertEquals("2", fizzBuzzConverter.fizzBuzzConvert(2));
+    }
+
 }
