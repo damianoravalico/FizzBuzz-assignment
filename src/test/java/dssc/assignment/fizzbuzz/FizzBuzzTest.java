@@ -50,4 +50,12 @@ public class FizzBuzzTest {
         assertEquals("FizzBuzz", fizzBuzzConverter.fizzBuzzConvert(30));
     }
 
+    @Test
+    public void convertSomeNumbers() {
+        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
+        assertEquals("FizzBuzz", fizzBuzzConverter.fizzBuzzConvert(45));
+        assertEquals("Fizz", fizzBuzzConverter.fizzBuzzConvert(9));
+        assertEquals("Buzz", fizzBuzzConverter.fizzBuzzConvert(25));
+    }
+
 }
