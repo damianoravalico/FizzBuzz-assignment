@@ -3,7 +3,6 @@ package dssc.assignment.fizzbuzz;
 public class FizzBuzzConverter {
 
     public static void main(String[] args) {
-
     }
 
     public String convert(int number) {

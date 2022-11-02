@@ -1,4 +1,4 @@
-# FizzBuzz assignment
+# FizzBuzz assignment for the Software Development Methods course
 
 We want to write a Java program that prints the numbers from 1 to 100 to the "standard" output stream and follows these rules.
 
@@ -18,4 +18,3 @@ We want our Java program to print numbers from 1 to 105 and apply these addition
 ## Notes
 
 - This assignment is a variant of the [Fizz Buzz Test](http://wiki.c2.com/?FizzBuzzTest).
-- Feel free to change the existing code.
