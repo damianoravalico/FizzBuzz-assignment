@@ -7,8 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class FizzBuzzTest {
 
     @Test
-    public void convertIntegerToString() {
+    public void convertOneAsIntegerToString() {
         FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
         assertEquals("1", fizzBuzzConverter.fizzBuzzConvert(1));
     }
+
 }
