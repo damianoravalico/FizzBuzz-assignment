@@ -6,7 +6,7 @@ public class FizzBuzzConverter {
 
     }
 
-    public String fizzBuzzConvert(int number) {
+    public String convert(int number) {
         if (number % 15 == 0) {
             return "FizzBuzz";
         }
