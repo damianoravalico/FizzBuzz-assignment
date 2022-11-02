@@ -26,7 +26,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void convertThreeMultipleToFizz() {
+    public void convertThreeMultiplesToFizz() {
         FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
         assertEquals("Fizz", fizzBuzzConverter.fizzBuzzConvert(6));
     }
@@ -38,9 +38,16 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void convertFiveMultipleToFizz() {
+    public void convertFiveMultiplesToFizz() {
         FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
         assertEquals("Buzz", fizzBuzzConverter.fizzBuzzConvert(10));
+    }
+
+    @Test
+    public void convertThreeAndFiveMultiplesToFizzBuzz() {
+        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
+        assertEquals("FizzBuzz", fizzBuzzConverter.fizzBuzzConvert(15));
+        assertEquals("FizzBuzz", fizzBuzzConverter.fizzBuzzConvert(30));
     }
 
 }
