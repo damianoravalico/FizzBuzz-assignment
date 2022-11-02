@@ -25,4 +25,10 @@ public class FizzBuzzTest {
         assertEquals("Fizz", fizzBuzzConverter.fizzBuzzConvert(3));
     }
 
+    @Test
+    public void convertThreeMultipleToFizz() {
+        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
+        assertEquals("Fizz", fizzBuzzConverter.fizzBuzzConvert(6));
+    }
+
 }
