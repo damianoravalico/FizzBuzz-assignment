@@ -9,7 +9,6 @@ public class FizzBuzzConverter {
     }
 
     private FizzBuzzConverter() {
-
     }
 
     public static String convert(int number) {
