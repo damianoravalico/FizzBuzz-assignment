@@ -2,7 +2,11 @@ package dssc.assignment.fizzbuzz;
 
 public class FizzBuzzConverter {
 
-    public static void main(String[] args) {
+    public static void main(String... args) {
+        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
+        for (int i = 1; i <= 15; i++) {
+            System.out.println(fizzBuzzConverter.convert(i));
+        }
     }
 
     public String convert(int number) {

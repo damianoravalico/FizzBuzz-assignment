@@ -2,6 +2,9 @@ package dssc.assignment.fizzbuzz;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzConverterTest {
@@ -55,6 +58,15 @@ public class FizzBuzzConverterTest {
         assertEquals("FizzBuzz", fizzBuzzConverter.convert(45));
         assertEquals("Fizz", fizzBuzzConverter.convert(9));
         assertEquals("Buzz", fizzBuzzConverter.convert(25));
+    }
+
+    @Test
+    public void convertHundredNumbers() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+        FizzBuzzConverter.main();
+        String forOutput = "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n";
+        assertEquals(forOutput, outputStream.toString());
     }
 
 }
