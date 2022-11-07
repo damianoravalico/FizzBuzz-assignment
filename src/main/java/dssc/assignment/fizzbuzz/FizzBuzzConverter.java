@@ -3,7 +3,7 @@ package dssc.assignment.fizzbuzz;
 public class FizzBuzzConverter {
 
     public static void main(String... args) {
-        for (int i = 1; i <= 15; i++) {
+        for (int i = 1; i <= 15; i++) { // Tests carried out only up to number 15 for simplicity
             System.out.println(FizzBuzzConverter.convert(i));
         }
     }
