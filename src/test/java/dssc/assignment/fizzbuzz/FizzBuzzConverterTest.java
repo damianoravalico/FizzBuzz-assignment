@@ -27,6 +27,7 @@ public class FizzBuzzConverterTest {
     @Test
     public void convertThreeMultiplesToFizz() {
         assertEquals("Fizz", FizzBuzzConverter.convert(6));
+        assertEquals("Fizz", FizzBuzzConverter.convert(21));
     }
 
     @Test
@@ -37,6 +38,7 @@ public class FizzBuzzConverterTest {
     @Test
     public void convertFiveMultiplesToFizz() {
         assertEquals("Buzz", FizzBuzzConverter.convert(10));
+        assertEquals("Buzz", FizzBuzzConverter.convert(50));
     }
 
     @Test
@@ -53,7 +55,7 @@ public class FizzBuzzConverterTest {
     }
 
     @Test
-    public void convertHundredNumbers() {
+    public void convertFifteenNumbers() {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
         FizzBuzzConverter.main();
