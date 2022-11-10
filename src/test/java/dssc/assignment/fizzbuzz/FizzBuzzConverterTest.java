@@ -61,7 +61,7 @@ public class FizzBuzzConverterTest {
     }
 
     @Test
-    public void convertFifteenNumbers() {
+    public void convertFifteenNumbersOnOutputStream() {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
         FizzBuzzConverter.main();
