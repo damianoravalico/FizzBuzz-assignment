@@ -42,6 +42,12 @@ public class FizzBuzzConverterTest {
         assertEquals("Bang", FizzBuzzConverter.convert(number));
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = {21, 42, 63})
+    public void convertThreeAndSevenMultiplesToFizzBang(int number) {
+        assertEquals("FizzBang", FizzBuzzConverter.convert(number));
+    }
+
     /*@Test
     public void convertFifteenNumbers() {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();

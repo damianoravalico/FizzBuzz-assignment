@@ -15,6 +15,9 @@ public class FizzBuzzConverter {
         if (number % 15 == 0) {
             return "FizzBuzz";
         }
+        if (number % 21 == 0) {
+            return "FizzBang";
+        }
         if (number % 3 == 0) {
             return "Fizz";
         }
