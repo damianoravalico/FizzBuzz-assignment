@@ -1,6 +1,9 @@
 package dssc.assignment.fizzbuzz;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -9,49 +12,28 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzConverterTest {
 
-    @Test
-    public void convertOneAsIntegerToString() {
-        assertEquals("1", FizzBuzzConverter.convert(1));
+    @ParameterizedTest
+    @CsvSource({"1, 1", "2, 2", "4, 4"})
+    public void convertIntegersToString(int number, String result) {
+        assertEquals(result, FizzBuzzConverter.convert(number));
     }
 
-    @Test
-    public void convertTwoAsIntegerToString() {
-        assertEquals("2", FizzBuzzConverter.convert(2));
+    @ParameterizedTest
+    @ValueSource(ints = {3, 6, 21})
+    public void convertThreeMultiplesToFizz(int number) {
+        assertEquals("Fizz", FizzBuzzConverter.convert(number));
     }
 
-    @Test
-    public void convertThreeAsIntegerToFizz() {
-        assertEquals("Fizz", FizzBuzzConverter.convert(3));
+    @ParameterizedTest
+    @ValueSource(ints = {5, 10, 50})
+    public void convertFiveMultiplesToFizz(int number) {
+        assertEquals("Buzz", FizzBuzzConverter.convert(number));
     }
 
-    @Test
-    public void convertThreeMultiplesToFizz() {
-        assertEquals("Fizz", FizzBuzzConverter.convert(6));
-        assertEquals("Fizz", FizzBuzzConverter.convert(21));
-    }
-
-    @Test
-    public void convertFiveAsIntegerToBuzz() {
-        assertEquals("Buzz", FizzBuzzConverter.convert(5));
-    }
-
-    @Test
-    public void convertFiveMultiplesToFizz() {
-        assertEquals("Buzz", FizzBuzzConverter.convert(10));
-        assertEquals("Buzz", FizzBuzzConverter.convert(50));
-    }
-
-    @Test
-    public void convertThreeAndFiveMultiplesToFizzBuzz() {
-        assertEquals("FizzBuzz", FizzBuzzConverter.convert(15));
-        assertEquals("FizzBuzz", FizzBuzzConverter.convert(30));
-    }
-
-    @Test
-    public void convertSomeNumbers() {
-        assertEquals("FizzBuzz", FizzBuzzConverter.convert(45));
-        assertEquals("Fizz", FizzBuzzConverter.convert(9));
-        assertEquals("Buzz", FizzBuzzConverter.convert(25));
+    @ParameterizedTest
+    @ValueSource(ints = {15, 30, 45})
+    public void convertThreeAndFiveMultiplesToFizz(int number) {
+        assertEquals("FizzBuzz", FizzBuzzConverter.convert(number));
     }
 
     @Test
