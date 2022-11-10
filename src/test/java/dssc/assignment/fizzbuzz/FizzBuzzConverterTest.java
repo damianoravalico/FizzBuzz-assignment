@@ -49,18 +49,24 @@ public class FizzBuzzConverterTest {
     }
 
     @ParameterizedTest
-    @ValueSource(ints = {35, 70, 105})
+    @ValueSource(ints = {35, 70, 140})
     public void convertFiveAndSevenMultiplesToFizzBang(int number) {
         assertEquals("BuzzBang", FizzBuzzConverter.convert(number));
     }
 
-    /*@Test
+    @ParameterizedTest
+    @ValueSource(ints = {105, 210, 315})
+    public void convertThreeAndFiveAndSevenMultiplesToFizzBuzzBang(int number) {
+        assertEquals("FizzBuzzBang", FizzBuzzConverter.convert(number));
+    }
+
+    @Test
     public void convertFifteenNumbers() {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
         FizzBuzzConverter.main();
         String forOutput = "1\n2\nFizz\n4\nBuzz\nFizz\nBang\n8\nFizz\nBuzz\n11\nFizz\n13\nBang\nFizzBuzz\n";
         assertEquals(forOutput, outputStream.toString());
-    }*/
+    }
 
 }

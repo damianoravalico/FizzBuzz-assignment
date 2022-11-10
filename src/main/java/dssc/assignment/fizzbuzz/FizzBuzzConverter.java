@@ -12,6 +12,9 @@ public class FizzBuzzConverter {
     }
 
     public static String convert(int number) {
+        if (number % 105 == 0) {
+            return "FizzBuzzBang";
+        }
         if (number % 35 == 0) {
             return "BuzzBang";
         }
